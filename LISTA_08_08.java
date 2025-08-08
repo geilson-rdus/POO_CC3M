@@ -16,7 +16,6 @@ public class Lista {
         System.out.printf("Média: %.2f\n",media);
         
         //EXERCICIO 2
-        Scanner scanner = new Scanner(System.in);
         System.out.println("Insira temperatura em graus celsius: ");
         float celsius = scanner.nextFloat();
         
