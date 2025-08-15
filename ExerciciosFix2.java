@@ -256,6 +256,7 @@ public class ExerciciosFix2 {
             }
         }
         System.out.println("Soma: " + somador);
+        scanner.close();
     }
         
 }
