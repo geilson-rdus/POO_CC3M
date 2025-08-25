@@ -8,6 +8,8 @@ package com.mycompany.aula;
  *
  * @author alunodev10
  */
+import java.util.Scanner;
+
 public class funcoes {
     public static void diaSemana(int a){
         switch(a){
@@ -107,7 +109,55 @@ public class funcoes {
             System.out.printf("%d ",contador);
             contador++;
         }
+        System.out.printf("%n");
     }
     
+    public static int somatorio(Scanner scanner){
+        int num = 0;
+        int soma = 0;
+        while(num >= 0){
+            System.out.print("Digite um numero inteiro: ");
+            num = scanner.nextInt();
+            if(num >= 0){
+                soma += num;
+            }
+        }
+        return soma;
+    }
     
+    public static void sorteio(Scanner scanner, int sorteio){
+        int chute = 0;
+        System.out.println("X = " + sorteio); //TESTANDO O NÚMERO SORTEADO E FACILITANDO BUSCA FUTURA
+        while(chute != sorteio){
+            System.out.print("Digite um numero inteiro no intervalo [1,100]: ");
+            chute = scanner.nextInt();
+            if(chute > sorteio){
+                System.out.println("O numero informado eh maior que o sorteado");
+            }else if(chute < sorteio){
+                System.out.println("O numero informado eh menor que o sorteado");
+            }
+        }
+        System.out.println("Parabens, voce acertou o numero");
+    }
+    
+    public static void contagemRegressiva(int num){
+        do{
+            System.out.printf("%d ",num);
+            num--;
+        }while(num >= 1);
+        System.out.printf("%n");
+    }
+    
+    public static void confirmaSenha(String senha, Scanner scanner){
+        String confirma = "";
+        do{
+           System.out.print("Repita a senha: ");
+           confirma = scanner.nextLine();
+           if(!confirma.equals(senha)){
+               System.out.println("Senha incorreta");
+           }
+        }while(!confirma.equals(senha));
+        System.out.println("Senha correta");
+    }
+            
 }
