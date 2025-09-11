@@ -10,4 +10,28 @@ package com.mycompany.exfix04;
  */
 public class Biblioteca {
     
+    private List<Livro> livros = new ArrayList<>(); 
+    
+    public void adicionarLivro(Livro l){
+        livros.add(l);
+    }
+    
+    public void emprestarLivro(int id){
+        if(id >= 0 && id<livros.size()){
+            boolean b = false;
+            livros.get(id).setDisponivel(b);
+        }else{
+            System.out.println("O indice informado nao esta presente na lista.");
+        } 
+    }
+    
+    public void devolverLivro(int id){
+        if(id >= 0 && id<livros.size()){
+            boolean b = true;
+            livros.get(id).setDisponivel(b);
+        }else{
+            System.out.println("O indice informado nao esta presente na lista.");
+        } 
+    }
+    
 }
