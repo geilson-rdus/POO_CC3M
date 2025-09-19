@@ -77,7 +77,9 @@ public class Desafio {
                     case 0:
                         System.out.println("Programa Encerrado");
                         break;
-                        
+                    default:
+                        System.out.println("Opção inválida");
+                        break;          
             }
                         
         }while(opcao != 0);  
