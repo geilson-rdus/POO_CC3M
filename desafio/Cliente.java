@@ -39,9 +39,10 @@ public class Cliente {
         if(valor <= this.saldo){
             this.saldo -= valor;
         }else{
-            System.out.println("O valor inserido é maior do que o disponível na conta.");
+            System.out.println("O valor inserido é maior do que o disponível na conta ou foi inserido um valor negativo.");
         }
     }
     
     
 }
+
