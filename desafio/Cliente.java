@@ -32,11 +32,13 @@ public class Cliente {
     }
     
     public void depositar(double valor){
-        this.saldo += valor;
+        if(valor > 0){
+            this.saldo += valor;
+        }
     }
     
     public void sacar(double valor){
-        if(valor <= this.saldo){
+        if(valor <= this.saldo && valor > 0){
             this.saldo -= valor;
         }else{
             System.out.println("O valor inserido é maior do que o disponível na conta ou foi inserido um valor negativo.");
@@ -45,4 +47,5 @@ public class Cliente {
     
     
 }
+
 
